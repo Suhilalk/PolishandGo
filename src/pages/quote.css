@@ -1,0 +1,279 @@
+.quote-page {
+  background: #f5f7fb;
+  min-height: 100vh;
+}
+
+.quote-container {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 40px 20px 60px;
+}
+
+.quote-hero {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.quote-eyebrow {
+  margin: 0 0 10px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: #2563eb;
+}
+
+.quote-hero h1 {
+  margin: 0 0 12px;
+  font-size: 44px;
+  line-height: 1.1;
+  color: #111827;
+}
+
+.quote-subtext {
+  max-width: 680px;
+  margin: 0 auto;
+  font-size: 17px;
+  line-height: 1.6;
+  color: #4b5563;
+}
+
+.quote-form {
+  display: grid;
+  gap: 20px;
+}
+
+.quote-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 10px 30px rgba(17, 24, 39, 0.06);
+}
+
+.quote-card h2 {
+  margin: 0 0 16px;
+  font-size: 22px;
+  color: #111827;
+}
+
+.quote-grid {
+  display: grid;
+  gap: 14px;
+}
+
+.quote-grid-1 {
+  grid-template-columns: 1fr;
+}
+
+.quote-grid-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.quote-grid-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.field-group {
+  display: grid;
+  gap: 8px;
+}
+
+.field-group label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  padding: 14px 15px;
+  font-size: 15px;
+  background: #ffffff;
+  color: #111827;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #9ca3af;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+.radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.radio-pill {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 18px;
+  border: 1px solid #d1d5db;
+  border-radius: 999px;
+  background: #f9fafb;
+  color: #111827;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.radio-pill input {
+  display: none;
+}
+
+.radio-pill:hover {
+  border-color: #2563eb;
+  background: #eff6ff;
+}
+
+.radio-pill.active {
+  background: #111827;
+  color: #ffffff;
+  border-color: #111827;
+}
+
+.bio-note {
+  margin-top: 16px;
+}
+
+.quote-submit-btn {
+  width: 100%;
+  border: none;
+  border-radius: 14px;
+  padding: 16px 20px;
+  font-size: 17px;
+  font-weight: 700;
+  cursor: pointer;
+  background: linear-gradient(135deg, #111827, #2563eb);
+  color: #ffffff;
+  box-shadow: 0 14px 30px rgba(37, 99, 235, 0.22);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+
+.quote-submit-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 18px 36px rgba(37, 99, 235, 0.28);
+}
+
+.quote-submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.quote-results {
+  margin-top: 24px;
+}
+
+.quote-message {
+  border-radius: 18px;
+  padding: 24px;
+  text-align: center;
+}
+
+.quote-error {
+  background: #fff1f2;
+  border: 1px solid #fecdd3;
+  color: #9f1239;
+}
+
+.quote-success {
+  background: #ffffff;
+  border: 1px solid #dbeafe;
+  box-shadow: 0 12px 32px rgba(37, 99, 235, 0.08);
+}
+
+.quote-success h2,
+.quote-error h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.quote-price {
+  font-size: 52px;
+  font-weight: 800;
+  line-height: 1;
+  margin: 18px 0 14px;
+  color: #111827;
+}
+
+.status-text {
+  margin-top: 14px;
+  font-weight: 600;
+}
+
+.success-text {
+  color: #166534;
+}
+
+.error-text {
+  color: #b91c1c;
+}
+
+@media (max-width: 900px) {
+  .quote-grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .quote-grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .quote-hero h1 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 600px) {
+  .quote-container {
+    padding: 28px 14px 48px;
+  }
+
+  .quote-card {
+    padding: 18px;
+    border-radius: 16px;
+  }
+
+  .quote-hero h1 {
+    font-size: 31px;
+  }
+
+  .quote-subtext {
+    font-size: 15px;
+  }
+
+  .quote-price {
+    font-size: 42px;
+  }
+
+  .radio-group {
+    gap: 10px;
+  }
+
+  .radio-pill {
+    width: 100%;
+    border-radius: 14px;
+  }
+}

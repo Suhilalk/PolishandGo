@@ -5,64 +5,94 @@ import Footer from "../components/Footer";
 export default function Home() {
   return (
     <div>
-      <NavBar />
+      <NavBar />  
 
-      <section>
-        <h1>Polish & Go Car Detailing</h1>
-        <p>Premium mobile detailing in Milton.</p>
-        <Link to="/quote">
-          <button>Get a Quote</button>
-        </Link>
-      </section>
+      <div className="container">
+        <section className="hero">
+          <div className="heroGrid">
+            <div>
+              <div className="badge">Mobile detailing in Milton</div>
+              <h1 className="h1">Polish and Go Car Detailing</h1>
+              <p className="p">
+                Quick quotes, clean results, and professional service. Get your estimate in under a minute.
+              </p>
 
-      <section>
-        <h2>Our Services</h2>
-      <div>
-        <h3>Interior Detailing</h3>
-        <p>
-          Deep cleaning of carpets, seats, and all interior surfaces. We remove stains, odors, and restore your car’s interior to like-new condition.
-        </p>
-        <img src="/gallery/car1_after.jpeg" alt="Interior Detailing" style={{ width: "100%", maxWidth: 400 }} />
-        <Link to="/quote">
-          <button>Get Interior Quote</button>
-        </Link>
+              <div className="actions">
+                <Link to="/quote">
+                  <button className="btn btnPrimary">Get Quote</button>
+                </Link>
+                <a href="mailto:polishngomilton@gmail.com">
+                  <button className="btn btnGhost">Contact</button>
+                </a>
+              </div>
+            </div>
+
+            <div className="heroCard">
+              <img className="heroImage" src="/gallery/Polish Logo.jpeg" alt="Logo" />
+            </div>
+          </div>
+        </section>
+
+        <section className="section">
+          <h2 className="title">Services</h2>
+
+          <div className="cards">
+            <div className="card">
+              <h3>Interior Detail</h3>
+              <p>Seats, carpets, panels, and deep clean based on condition.</p>
+              <Link to="/quote?service=interior">
+                <button className="btn btnPrimary">Quote Interior</button>
+              </Link>
+            </div>
+
+            <div className="card">
+              <h3>Exterior Wash</h3>
+              <p>Wash, wheels, and exterior clean based on condition.</p>
+              <Link to="/quote?service=exterior">
+                <button className="btn btnPrimary">Quote Exterior</button>
+              </Link>
+            </div>
+
+            <div className="card">
+              <h3>Full Detail</h3>
+              <p>Interior plus exterior with add ons as needed.</p>
+              <Link to="/quote?service=full">
+                <button className="btn btnPrimary">Quote Full</button>
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        <section className="section">
+          <h2 className="title">Recent work</h2>
+
+          <div className="galleryGrid">
+            <img className="photo" src="/gallery/car1_before.jpeg" alt="Before 1" />
+            <img className="photo" src="/gallery/car1_after.jpeg" alt="After 1" />
+            <img className="photo" src="/gallery/car2_before.jpeg" alt="Before 2" />
+            <img className="photo" src="/gallery/car2_after.jpeg" alt="After 2" />
+            <img className="photo" src="/gallery/car3_before.jpeg" alt="Before 3" />
+            <img className="photo" src="/gallery/car3_after.jpeg" alt="After 3" />
+            <img className="photo" src="/gallery/car4_before.jpeg" alt="Before 4" />
+            <img className="photo" src="/gallery/car4_after.jpeg" alt="After 4" />
+          </div>
+
+          <div className="actions" style={{ marginTop: 18 }}>
+            <Link to="/quote">
+              <button className="btn btnPrimary">Get Quote</button>
+            </Link>
+            <a href="tel:5198355580">
+              <button className="btn btnGhost">Call 519 835 5580</button>
+            </a>
+          </div>
+        </section>
+
+        <div className="footerBar">
+          <div className="container">
+            Polish and Go Car Detailing. Milton, Ontario. Email polishngomilton@gmail.com
+          </div>
+        </div>
       </div>
-      
-      <div>
-        <h3>Exterior Detailing</h3>
-        <p>
-          Hand wash, clay bar treatment, waxing, and ceramic coatings. We bring back the shine and protect your car’s exterior.
-        </p>
-         <img src="/gallery/exterior.jpg" alt="exterior Detailing" style={{ width: "100%", maxWidth: 400 }} />
-        <Link to="/quote">
-          <button>Get Exterior Quote</button>
-        </Link>
-      </div>
-
-      <div>
-        <h3>full detail</h3>
-        <p>
-          combining interior and exterior detailing for a complete transformation. Your car will look and feel brand new.
-        </p>
-        <Link to="/quote">
-          <button>Get Full Detail Quote</button>
-        </Link>
-      </div>
-      </section>
-
-      <section>
-        <h2>Why Choose Us</h2>
-        <p>
-          Professional, reliable, and results that actually shine. We treat your car like it’s our own.
-        </p>
-      </section>
-
-      <section>
-        <h2>Ready to Book?</h2>
-        <Link to="/quote">
-          <button>Start Your Quote</button>
-        </Link>
-      </section>
 
       <Footer />
     </div>
